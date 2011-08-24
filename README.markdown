@@ -98,7 +98,7 @@ What will you be able to do with the initial release (if you ever get around to 
 
 - Standard IRB functionality
 
-    It'll depend on Wirble at first, I'll use that to make it less ugly early on.
+    It'll likely depend on Wirble at first, I'll use that to make it less ugly early on.
 
 - Execute arbitrary shell commands
 
@@ -108,17 +108,17 @@ What will you be able to do with the initial release (if you ever get around to 
 
     You'll be able to pass in options using symbols like `ls :b`.
     The most glaring limitation here is the bash command `ls -1` since symbols can't start with a number.
-    So strings will be allowed for this too.
+    You'll have to make due with `ls :'1'` for now.
 
-- Basic "object command mapping"
+- Basic "object command mapping" and command history
 
-  Command history will be stored in an object with basic metadata (such as output and status information).
+    Command history will be stored in an object with basic metadata (such as output and status information).
 
 - Basic directory history
 
-  This will probably start out as an array.
-  I'll just truncate the array when branching off at a different point in the directory history.
-  At some point, this will be a proper traversable tree object.
+    This will probably start out as an array.
+    I'll just truncate the array when branching off at a different point in the directory history.
+    At some point, this will be a proper traversable tree object.
 
 Any pie-in-the-sky plans for it?
 -----
