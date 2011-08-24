@@ -120,8 +120,17 @@ What will you be able to do with the initial release (if you ever get around to 
     I'll just truncate the array when branching off at a different point in the directory history.
     At some point, this will be a proper traversable tree object.
 
+- More useful prompt
+
+    Essentially a more bash-like prompt rather than an IRB-esque one.
+
 Any pie-in-the-sky plans for it?
 -----
+
+- Creating command lines using method chaining
+
+    Inspirate by Arel in the most vague sense, this would be the ability to chain methods together to form command lines in a more ruby-ish way.
+    I'm not even sure how this would work really, but it sounds really cool right now.
 
 - Dynamic method creation
 
