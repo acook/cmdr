@@ -93,6 +93,33 @@ Isn't that an awful lot of work?
 
 Probably. But I've wanted to do this for a while, and I imagine I'll learn a lot in the process.
 
+What will you be able to do with the initial release (if you ever get around to it)?
+------
+
+- Standard IRB functionality
+
+    It'll depend on Wirble at first, I'll use that to make it less ugly early on.
+
+- Execute arbitrary shell commands
+
+    I'll just use method missing and probably Popen4 to execute commands.
+
+- Ruby-ized shell commands
+
+    You'll be able to pass in options using symbols like `ls :b`.
+    The most glaring limitation here is the bash command `ls -1` since symbols can't start with a number.
+    So strings will be allowed for this too.
+
+- Basic "object command mapping"
+
+  Command history will be stored in an object with basic metadata (such as output and status information).
+
+- Basic directory history
+
+  This will probably start out as an array.
+  I'll just truncate the array when branching off at a different point in the directory history.
+  At some point, this will be a proper traversable tree object.
+
 Who came up with this harebrained idea anyway?
 ------
 
