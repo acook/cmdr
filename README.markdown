@@ -25,70 +25,68 @@ Fine, I can't endorse this endevour, but I am curious what it looks like.
 Alright, well met me give you a couple of examples of what I'd like to be able to do with cmdr.
 *this is all pseudocode at the moment*
 
-- Commands are persistant objects that retain attributes
-*yes this could get huge, there will be limits, don't worry*
+- Commands are persistant objects that retain attributes *(yes this could get huge, there will be limits, don't worry)*
 
-    $ ls
-    .git/  README.markdown
-    $ hist
-    1 ls <succeded a few seconds ago>
-    $ hist.raw
-    [
-      #<Cmdr>,
-      {command: 'ls', output: [#<Cmdr::Output::Stdout: ".git/  README.markdown">], status: #<Cmdr::Status::External::Process: pid 82960 exit 0>, type: External, start_time: 011-08-24 00:27:59 -0700, exit_time: 011-08-24 00:27:59 -0700},
-      {command: 'hist', output: [#<Cmdr::CommandHistory>], status: Success, type: Internal, start_time: 011-08-24 00:28:02 -0700, exit_time: 011-08-24 00:28:03 -0700},
-      {command: 'hist.raw', output: [], status: Running, type: Internal, start_time: 011-08-24 00:28:05 -0700, exit_time: nil}
-    ]
-    $ cmdhist[1].output
-    .git/  README.markdown
+        $ ls
+        .git/  README.markdown
+        $ hist
+        1 ls <succeded a few seconds ago>
+        $ hist.raw
+        [
+            #<Cmdr>,
+            {command: 'ls', output: [#<Cmdr::Output::Stdout: ".git/  README.markdown">], status: #<Cmdr::Status::External::Process: pid 82960 exit 0>, type: External, start_time: 011-08-24 00:27:59 -0700, exit_time: 011-08-24 00:27:59 -0700},
+            {command: 'hist', output: [#<Cmdr::CommandHistory>], status: Success, type: Internal, start_time: 011-08-24 00:28:02 -0700, exit_time: 011-08-24 00:28:03 -0700},
+            {command: 'hist.raw', output: [], status: Running, type: Internal, start_time: 011-08-24 00:28:05 -0700, exit_time: nil}
+        ]
+        $ cmdhist[1].output
+        .git/  README.markdown
 
 - Robust directory history
 
-    $ cd ~
-    $ cd /
-    $ cd.hist
-    pwd /
-    1   ~
-    2   /home/acook/pork/cmdr
-    $ back
-    ~
-    $ pwd
-    /home/acook
-    $ cd.hist
-    0   /
-    pwd ~
-    1   ~
-    2   /home/acook/pork/cmdr
-    $ fore
-    /
-    $ pwd
-    /
+        $ cd ~
+        $ cd /
+        $ cd.hist
+        pwd /
+        1   ~
+        2   /home/acook/pork/cmdr
+        $ back
+        ~
+        $ pwd
+        /home/acook
+        $ cd.hist
+        0   /
+        pwd ~
+        1   ~
+        2   /home/acook/pork/cmdr
+        $ fore
+        /
+        $ pwd
+        /
 
-- Easily overridable default command options
-*much like what aliases are used for in bash*
+- Easily overridable default command options *(much like what aliases are often used for in bash)*
 
-    $ ls.opts.defaults << '1'
-    $ ls
-    .git/
-    README.markdown
-    $ ls.opts.only :b
-    .git/  README.markdown
+        $ ls.opts.defaults << '1'
+        $ ls
+        .git/
+        README.markdown
+        $ ls.opts.only :b
+        .git/  README.markdown
 
 - Session environment persistance
 
-    $ x = 1
-    x = 1
-    $ ls
-    .git/  README.markdown
-    $ exit                    # edit cmdr
-    sh-3.2$ cmdr              # rerun cmdr from sh
-    cmdr v0.1
-    $ hist
-    1 x = 1 <succeeded about a minute ago>
-    2 ls    <succeeded less than a minute ago>
-    3 exit  <succedded less than a minute ago>
-    $ x
-    => 1
+        $ x = 1
+        x = 1
+        $ ls
+        .git/  README.markdown
+        $ exit                    # edit cmdr
+        sh-3.2$ cmdr              # rerun cmdr from sh
+        cmdr v0.1
+        $ hist
+        1 x = 1 <succeeded about a minute ago>
+        2 ls    <succeeded less than a minute ago>
+        3 exit  <succedded less than a minute ago>
+        $ x
+        => 1
 
 Who came up with thie harebrained idea anyway?
 ------
