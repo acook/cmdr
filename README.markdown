@@ -15,6 +15,9 @@ In both cases they assumed the underlying system was also an object system and t
 Are you getting the point any time soon?
 ------
 
+I'd like to encapsulate commands and external processes as objects and replace most built-in bash commands with more object-oriented (and prettier) versions.
+Really not that complex at its most basic, but believe me, it'll get complicated fast. See below for some examples of the shiny functionality I'd like it to have.
+
 
 Fine, I can't endorse this endevour, but I am curious what it looks like.
 ------
