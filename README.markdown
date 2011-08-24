@@ -88,11 +88,8 @@ Alright, well met me give you a couple of examples of what I'd like to be able t
         $ x
         => 1
 
-Who came up with thie harebrained idea anyway?
+Who came up with this harebrained idea anyway?
 ------
 
-**Anthony M. Cook** *2011* - @anthony_m_cook
-
-http://anthonymcook.com
-http://github.com/acook
+**Anthony M. Cook** *2011* - @anthony_m_cook / http://anthonymcook.com / http://github.com/acook
 
