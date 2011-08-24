@@ -120,6 +120,21 @@ What will you be able to do with the initial release (if you ever get around to 
   I'll just truncate the array when branching off at a different point in the directory history.
   At some point, this will be a proper traversable tree object.
 
+Any pie-in-the-sky plans for it?
+-----
+
+- Dynamic method creation
+
+    Most commands would have to be parsed in method_missing.
+    This tends to be slow, so I'll cache successful commands.
+    The first time you run an unknown command it will dynamically define a method with that name to speed up subsequent runs.
+
+- Tokenizer
+
+    I'll need some sort of tokenizer to pre-process the eval loop if I don't want to have to use quotes everywhere.
+    That might suck so there's no promises I'll do it.
+
+
 Who came up with this harebrained idea anyway?
 ------
 
