@@ -6,11 +6,11 @@ Before even glancing at this project, check out [Pry](https://github.com/pry/pry
 Rather Different Goals?
 ------
 
-So here's the deal, years ago I read about the new fancy-shmancy [Monad](http://en.wikipedia.org/wiki/Windows_PowerShell "Yes I still call it Monad because it was an awesome name, dammit!"). It's goal, as I understood it boiled down to *commands as objects*. It was a fantastc concept. Naturally, as it has with many things, Microsoft failed to deliver.
+So here's the deal, years ago I read about the new fancy-shmancy [Monad](http://en.wikipedia.org/wiki/Windows_PowerShell "Yes I still call it Monad because it was an awesome name, dammit!"). It's goal, as I understood it boiled down to *commands as objects*. It was a fantastic concept. Naturally, as it has with many things, Microsoft failed to deliver.
 
 And again, as it often does, the [Oberon](http://en.wikipedia.org/wiki/Oberon_(programming_language "The most badass shit no one has heard of.") system did it first and better. In fact I use the Oberon OS long before Monad was even thought of, but Monad reminded me of the concept again.
 
-In both cases they assumed the underlying system was also an object system and then gave you immense power over those elements, accessible from the commandline just like a standard shell. Currently, I'm not working on my own operating system (yet) so I have so such luxury. However, unixy systems such as Linux, OS X, BSD, Hurd, and others provide a lot of process-level information and documentation that is exceedingly simple to access and parse (once you know where to look..).
+In both cases they assumed the underlying system was also an object system and then gave you immense power over those elements, accessible from the command line just like a standard shell. Currently, I'm not working on my own operating system (yet) so I have so such luxury. However, Unix-y systems such as Linux, OS X, BSD, Hurd, and others provide a lot of process-level information and documentation that is exceedingly simple to access and parse (once you know where to look..).
 
 Are you getting the point any time soon?
 ------
@@ -19,13 +19,13 @@ I'd like to encapsulate commands and external processes as objects and replace m
 Really not that complex at its most basic, but believe me, it'll get complicated fast. See below for some examples of the shiny functionality I'd like it to have.
 
 
-Fine, I can't endorse this endevour, but I am curious what it looks like.
+Fine, I can't endorse this endeavor, but I am curious what it looks like.
 ------
 
 Alright, well met me give you a couple of examples of what I'd like to be able to do with cmdr.
 *this is all pseudocode at the moment*
 
-- Commands are persistant objects that retain attributes *(yes this could get huge, there will be limits, don't worry)*
+- Commands are persistent objects that retain attributes *(yes this could get huge, there will be limits, don't worry)*
 
         $ ls
         .git/  README.markdown
@@ -72,7 +72,7 @@ Alright, well met me give you a couple of examples of what I'd like to be able t
         $ ls.opts.only :b
         .git/  README.markdown
 
-- Session environment persistance
+- Session environment persistence
 
         $ x = 1
         x = 1
