@@ -88,6 +88,11 @@ Alright, well met me give you a couple of examples of what I'd like to be able t
         $ x
         => 1
 
+Isn't that an awful lot of work?
+------
+
+Probably. But I've wanted to do this for a while, and I imagine I'll learn a lot in the process.
+
 Who came up with this harebrained idea anyway?
 ------
 
